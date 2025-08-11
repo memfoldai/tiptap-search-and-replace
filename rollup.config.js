@@ -27,7 +27,19 @@ const config = {
     sourcemaps(),
     babel(),
     commonjs(),
-    typescript(),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfig: "./tsconfig.json",
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+          declarationDir: "dist",
+          emitDeclarationOnly: false,
+          noEmit: false,
+        },
+      },
+      clean: true,
+    }),
   ],
 };
 

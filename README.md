@@ -1,10 +1,10 @@
-# Tiptap 2 Search and Replace
+# Tiptap 3 Search and Replace
 
-Search and Replace extension for [Tiptap 2](https://tiptap.dev). Published to npm as [@sereneinserenade/tiptap-search-and-replace](https://www.npmjs.com/package/@sereneinserenade/tiptap-search-and-replace).
+Search and Replace extension for [Tiptap 3](https://tiptap.dev). Published to npm as [@sereneinserenade/tiptap-search-and-replace](https://www.npmjs.com/package/@sereneinserenade/tiptap-search-and-replace).
 
 A ⭐️ to the repo if you 👍 / ❤️  what I'm doing would be much appreciated. If you're using this extension and making money from it, it'd be very kind of you to [:heart: Sponsor me](https://github.com/sponsors/sereneinserenade). If you're looking for a **dev to work you on your project's Rich Text Editor** with or as **a frontend developer, [DM me on Discord/Twitter/LinkedIn](https://github.com/sereneinserenade)👨‍💻🤩**.
 
-I've made a bunch of extensions for Tiptap 2, some of them are **Google Docs like Commenting**, **Resize image and Videos**, **LanguageTool integration** with tiptap. You can check it our here https://github.com/sereneinserenade#a-glance-of-my-projects .
+I've made a bunch of extensions for Tiptap, some of them are **Google Docs like Commenting**, **Resize image and Videos**, **LanguageTool integration** with tiptap. You can check it our here https://github.com/sereneinserenade#a-glance-of-my-projects .
 
 # Live Demo
 
@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/45892659/163356581-5fd38888-4e29-41d9-
 
 ## How to use
 
-> **Note**: npm version is not up-to-date. Just copy paste [the extension](./src/tiptap-extensions/searchAndReplace.ts) in your code and it should work
+> **Note**: This repository and demo target Tiptap v3. Use versions `^3.x` for `@tiptap/*` packages. Demo imports the local extension from `src/searchAndReplace.ts`.
 
 **Ideally you should keep track of these states in your code, but if you absolutely need to read the `searchTerm` and `replaceTerm` from extension, here's the code.**
 ```ts

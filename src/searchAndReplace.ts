@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import { Extension, Range, type Dispatch } from "@tiptap/core";
+import { Extension, Range } from "@tiptap/core";
 import { Decoration, DecorationSet } from "@tiptap/pm/view";
 import {
   Plugin,
@@ -33,37 +33,13 @@ import { Node as PMNode } from "@tiptap/pm/model";
 declare module "@tiptap/core" {
   interface Commands<ReturnType> {
     search: {
-      /**
-       * @description Set search term in extension.
-       */
       setSearchTerm: (searchTerm: string) => ReturnType;
-      /**
-       * @description Set replace term in extension.
-       */
       setReplaceTerm: (replaceTerm: string) => ReturnType;
-      /**
-       * @description Set case sensitivity in extension.
-       */
       setCaseSensitive: (caseSensitive: boolean) => ReturnType;
-      /**
-       * @description Reset current search result to first instance.
-       */
       resetIndex: () => ReturnType;
-      /**
-       * @description Find next instance of search result.
-       */
       nextSearchResult: () => ReturnType;
-      /**
-       * @description Find previous instance of search result.
-       */
       previousSearchResult: () => ReturnType;
-      /**
-       * @description Replace first instance of search result with given replace term.
-       */
       replace: () => ReturnType;
-      /**
-       * @description Replace all instances of search result with given replace term.
-       */
       replaceAll: () => ReturnType;
     };
   }
@@ -169,7 +145,7 @@ function processSearches(
 const replace = (
   replaceTerm: string,
   results: Range[],
-  { state, dispatch }: { state: EditorState; dispatch: Dispatch },
+  { state, dispatch }: { state: EditorState; dispatch: (tr: Transaction) => void },
 ) => {
   const firstResult = results[0];
 
@@ -207,7 +183,7 @@ const rebaseNextResult = (
 const replaceAll = (
   replaceTerm: string,
   results: Range[],
-  { tr, dispatch }: { tr: Transaction; dispatch: Dispatch },
+  { tr, dispatch }: { tr: Transaction; dispatch: (tr: Transaction) => void },
 ) => {
   let offset = 0;
 
@@ -254,6 +230,12 @@ export interface SearchAndReplaceStorage {
   lastCaseSensitive: boolean;
   resultIndex: number;
   lastResultIndex: number;
+}
+
+declare module "@tiptap/core" {
+  interface Storage {
+    searchAndReplace: SearchAndReplaceStorage;
+  }
 }
 
 export const SearchAndReplace = Extension.create<
