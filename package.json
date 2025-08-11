@@ -1,6 +1,6 @@
 {
-  "name": "@sereneinserenade/tiptap-search-and-replace",
-  "version": "0.1.1",
+  "name": "@memfoldai/tiptap-search-and-replace",
+  "version": "0.2.0",
   "description": "Tiptap Extension for adding comments",
   "keywords": [
     "tiptap-search-and-replace-extension",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sereneinserenade/tiptap-search-and-replace/"
+    "url": "https://github.com/memfoldai/tiptap-search-and-replace/"
   },
   "author": "Jeet Mandaliya (github: sereneinserenade)",
   "funding": {
@@ -41,5 +41,8 @@
   "peerDependencies": {
     "@tiptap/core": "^3.x.x",
     "@tiptap/pm": "^3.x.x"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

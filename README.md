@@ -1,6 +1,6 @@
 # Tiptap 3 Search and Replace
 
-Search and Replace extension for [Tiptap 3](https://tiptap.dev). Published to npm as [@sereneinserenade/tiptap-search-and-replace](https://www.npmjs.com/package/@sereneinserenade/tiptap-search-and-replace).
+Search and Replace extension for [Tiptap 3](https://tiptap.dev). Published to npm as `@memfoldai/tiptap-search-and-replace`.
 
 A ⭐️ to the repo if you 👍 / ❤️  what I'm doing would be much appreciated. If you're using this extension and making money from it, it'd be very kind of you to [:heart: Sponsor me](https://github.com/sponsors/sereneinserenade). If you're looking for a **dev to work you on your project's Rich Text Editor** with or as **a frontend developer, [DM me on Discord/Twitter/LinkedIn](https://github.com/sereneinserenade)👨‍💻🤩**.
 
@@ -27,20 +27,20 @@ const replaceTerm: string = editor.storage.searchAndReplace.replaceTerm
 ```
 
 
-I've published it as an [npm package](https://www.npmjs.com/package/@sereneinserenade/tiptap-search-and-replace) so you can either directly install it, 
+I've published it as an npm package so you can either directly install it, 
  
 <details>
   <summary> with NPM </summary>
 
 ```
-npm i @sereneinserenade/tiptap-search-and-replace
+npm i @memfoldai/tiptap-search-and-replace
 ```
 </details>
 <details>
   <summary> with Yarn </summary>
 
 ```
-yarn add @sereneinserenade/tiptap-search-and-replace
+yarn add @memfoldai/tiptap-search-and-replace
 ```
 </details>
 
